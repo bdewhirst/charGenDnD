@@ -13,6 +13,7 @@ def gen_stats() -> list:
         rolls_for_stat: list = dice.drop_lowest(dice.roll(quantity=4, faces=6))
         a_stat = sum(rolls_for_stat)
         stats.append(a_stat)
+    stats.sort()
     return stats
 
 
